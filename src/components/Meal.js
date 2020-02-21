@@ -3,14 +3,20 @@ import { OrderContext } from "../context/OrderContext"
 
 import { PRICES } from "../data/menu"
 
-const Meal = ({ updateMeals, meal }) => {
+const Meal = ({ meal }) => {
   // TODO: Create Tag component. One for each of these if they are true
-  const { vegan, vegetarian, wholeThirty } = meal
+  // const { vegan, vegetarian, wholeThirty } = meal
   const [mealOrder, setMealOrder] = useState(meal)
 
-  const order = useContext(OrderContext)
+  const { meals, setMeals } = useContext(OrderContext)
 
-  console.log(order)
+  const updateMeals = updatedMeal => {
+    const mealToUpdate = meals.findIndex(item => item.id === updatedMeal.id)
+    const updatedMeals = [...meals]
+    updatedMeals[mealToUpdate] = updatedMeal
+
+    setMeals(updatedMeals)
+  }
 
   const updateCountAndPrice = ({ quantity, isSide, isSoup }, action) => {
     if (action === "decrement" && quantity > 0) {

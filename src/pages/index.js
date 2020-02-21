@@ -8,21 +8,9 @@ import Meal from "../components/Meal"
 import OrderTotals from "../components/OrderTotals"
 
 const IndexPage = () => {
-  const {
-    meals,
-    setMeals,
-    subTotal,
-    setSubTotal,
-    mealCount,
-    setMealCount,
-  } = useContext(OrderContext)
-  const updateMeals = updatedMeal => {
-    const mealToUpdate = meals.findIndex(item => item.id === updatedMeal.id)
-    const updatedMeals = [...meals]
-    updatedMeals[mealToUpdate] = updatedMeal
-
-    setMeals(updatedMeals)
-  }
+  const { meals, subTotal, setSubTotal, mealCount, setMealCount } = useContext(
+    OrderContext
+  )
 
   useEffect(() => {
     const totals = meals.reduce(
@@ -51,7 +39,6 @@ const IndexPage = () => {
                 key={meal.id}
                 meal={meal}
                 meals={meals}
-                updateMeals={updateMeals}
                 quantity={meal.quantity}
               />
             ))}
@@ -62,7 +49,6 @@ const IndexPage = () => {
         <div className="text-center m-auto mt-12">
           <Link
             className="px-32 py-5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full"
-            state={{ meals, subTotal, mealCount }}
             to="/order-summary/"
           >
             Place Order

@@ -1,14 +1,12 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
+import { Link } from "gatsby"
 import { OrderContext } from "../context/OrderContext"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import OrderTotals from "../components/OrderTotals"
-import Alert from "../components/Alert"
 
-const OrderSummary = ({ location }) => {
-  const [alert, setAlert] = useState(false)
-
+const OrderSummary = () => {
   const { meals, subTotal, mealCount } = useContext(OrderContext)
 
   return (
@@ -38,16 +36,9 @@ const OrderSummary = ({ location }) => {
         <div className="mb-12" style={{ maxWidth: "20rem" }}>
           <OrderTotals subTotal={subTotal} mealCount={mealCount} />
         </div>
-        {alert ? (
-          <Alert setAlert={setAlert} />
-        ) : (
-          <button
-            className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full"
-            onClick={() => setAlert(true)}
-          >
-            Start Over
-          </button>
-        )}
+        <button className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full">
+          <Link to="/">Edit Order</Link>
+        </button>
       </div>
     </Layout>
   )
