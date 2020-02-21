@@ -1,8 +1,8 @@
 import React from "react"
 
 const OrderTotals = ({ subTotal, mealCount }) => {
-  const tipRate = 0.1
-  const tip = subTotal * tipRate
+  const TIP_RATE = 0.1
+  const tip = subTotal * TIP_RATE
   const total = subTotal + tip
   return (
     <>

@@ -20,7 +20,7 @@ const OrderSummary = () => {
         <h2 className="mt-12 mb-8">Order Summary</h2>
         <div className="grid grid-cols-3 gap-8 mb-24">
           {meals &&
-            Object.values(meals).map(meal => {
+            meals.map(meal => {
               return (
                 meal.quantity > 0 && (
                   <div key={meal.title} className="bg-white rounded shadow-sm">
