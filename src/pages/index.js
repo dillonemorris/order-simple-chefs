@@ -38,13 +38,15 @@ const IndexPage = () => {
         className="flex-col flex-1 max-w-xl font-sans container mx-auto"
       >
         <div className="flex justify-between border-b border-gray-400 pb-4 mb-12">
-          <h1 className="text-2xl self-end text-gray-700 px-12">Menu</h1>
-          <button
-            className="bg-transparent hover:bg-indigo-600 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded-full"
-            onClick={() => setMeals(defaultOrderState)}
-          >
-            Clear Order
-          </button>
+          <h1 className="text-2xl self-end text-gray-700 px-12 pt-5">Menu</h1>
+          {mealCount > 0 && (
+            <button
+              className="bg-transparent hover:bg-indigo-600 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded-full"
+              onClick={() => setMeals(defaultOrderState)}
+            >
+              Clear {mealCount} Dish{mealCount > 1 && "es"}
+            </button>
+          )}
         </div>
         <div>
           {meals &&

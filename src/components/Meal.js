@@ -7,11 +7,10 @@ const Meal = ({ meal }) => {
   // TODO: Create Tag component. One for each of these if they are true
   // const { vegan, vegetarian, wholeThirty } = meal
   const [mealOrder, setMealOrder] = useState(meal)
-
   const { meals, setMeals } = useContext(OrderContext)
 
   const updateMeals = updatedMeal => {
-    const mealToUpdate = meals.findIndex(item => item.id === updatedMeal.id)
+    const mealToUpdate = meals.findIndex(meal => meal.id === updatedMeal.id)
     const updatedMeals = [...meals]
     updatedMeals[mealToUpdate] = updatedMeal
 
