@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import OrderContext from "../context/OrderContext"
+import { OrderContext } from "../context/OrderContext"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,10 +8,8 @@ import Alert from "../components/Alert"
 
 const OrderSummary = ({ location }) => {
   const [alert, setAlert] = useState(false)
-  const { state } = location
-  const { meals, subTotal, mealCount } = state
 
-  const order = useContext(OrderContext)
+  const { meals, subTotal, mealCount } = useContext(OrderContext)
 
   return (
     <Layout>

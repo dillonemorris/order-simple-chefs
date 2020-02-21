@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
+import { OrderContext } from "../context/OrderContext"
+
 import { PRICES } from "../data/menu"
 
-const Meal = ({ meals, updateMeals, meal }) => {
+const Meal = ({ updateMeals, meal }) => {
   // TODO: Create Tag component. One for each of these if they are true
   const { vegan, vegetarian, wholeThirty } = meal
   const [mealOrder, setMealOrder] = useState(meal)
+
+  const order = useContext(OrderContext)
+
+  console.log(order)
 
   const updateCountAndPrice = ({ quantity, isSide, isSoup }, action) => {
     if (action === "decrement" && quantity > 0) {

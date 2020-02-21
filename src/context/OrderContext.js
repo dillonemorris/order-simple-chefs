@@ -1,7 +1,27 @@
-import { createContext } from "react"
+import React, { useState, createContext } from "react"
 import menu from "../data/menu"
 
-const OrderContext = createContext()
+export const OrderContext = createContext({})
 
-export const OrderProvider = OrderContext.Provider
-export default OrderContext
+const OrderProvider = ({ children }) => {
+  const [meals, setMeals] = useState(menu.meals)
+  const [subTotal, setSubTotal] = useState(0)
+  const [mealCount, setMealCount] = useState(0)
+
+  return (
+    <OrderContext.Provider
+      value={{
+        meals,
+        setMeals,
+        subTotal,
+        setSubTotal,
+        mealCount,
+        setMealCount,
+      }}
+    >
+      {children}
+    </OrderContext.Provider>
+  )
+}
+
+export default OrderProvider
