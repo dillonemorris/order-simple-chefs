@@ -4,6 +4,8 @@ export const PRICES = {
   soup: 5,
 }
 
+export const filters = ["soup", "side", "paleo", "vegetarian", "vegan"]
+
 const menu = {
   meals: [
     {

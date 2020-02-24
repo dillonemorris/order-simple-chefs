@@ -3,12 +3,11 @@ import { Link } from "gatsby"
 import { OrderContext } from "../context/OrderContext"
 import { defaultOrderState } from "../context/OrderContext"
 
+import { filters } from "../data/menu"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Meal from "../components/Meal"
 import OrderTotals from "../components/OrderTotals"
-
-const filters = ["soup", "side", "paleo", "vegetarian", "vegan"]
 
 const IndexPage = () => {
   const {
@@ -60,7 +59,6 @@ const IndexPage = () => {
             </button>
           )}
         </div>
-        {/* TODO: make filter buttons (Soup, Side, Paleo, Veggie, Vegan) */}
         <div className="px-12">
           {filters.map(filter => (
             <button
