@@ -24,18 +24,15 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        className="bg-gray-100"
-        style={{
-          margin: `0 auto`,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <main>{children}</main>
-      </div>
-    </>
+    <div
+      className="bg-gray-100 h-full"
+      style={{
+        margin: `0 auto`,
+        padding: `1.45rem 1.0875rem`,
+      }}
+    >
+      <main>{children}</main>
+    </div>
   )
 }
 

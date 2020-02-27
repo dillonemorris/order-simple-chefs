@@ -7,6 +7,7 @@ import { filters } from "../data/menu"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Meal from "../components/Meal"
+import Tag from "../components/Tag"
 import OrderTotals from "../components/OrderTotals"
 
 const IndexPage = () => {
@@ -60,17 +61,15 @@ const IndexPage = () => {
           )}
         </div>
         <div className="px-12">
-          {filters.map(filter => (
-            <button
-              key={filter}
-              className="px-4 py-1 rounded-full mr-2 capitalize text-indigo-900 bg-indigo-100"
-              onClick={() => updateFilter(filter)}
-              style={{
-                background: activeFilter === filter ? "#5A67D8" : "#EDF2F7",
-                color: activeFilter === filter ? "#fff" : "#4A5568",
-              }}
-            >
-              {filter}
+          {filters.map(({ title, icon }) => (
+            <button key={title} onClick={() => updateFilter(title)}>
+              <Tag
+                backgroundColor={activeFilter === title ? "#5A67D8" : "#EDF2F7"}
+                color={activeFilter === title ? "#fff" : "#4A5568"}
+                title={title}
+                icon={icon}
+                iconColor={activeFilter === title ? "#fff" : "#4A5568"}
+              />
             </button>
           ))}
         </div>

@@ -4,15 +4,20 @@ export const PRICES = {
   soup: 5,
 }
 
-export const filters = ["soup", "side", "paleo", "vegetarian", "vegan"]
+export const filters = [
+  { title: "soup", icon: "Soup" },
+  { title: "side", icon: "Side" },
+  { title: "paleo", icon: "Paleo" },
+  { title: "vegetarian", icon: "Vegetarian" },
+  { title: "vegan", icon: "Vegan" },
+]
 
 const menu = {
   meals: [
     {
       id: 1,
-      title: "Grilled tri tip 🥩",
-      description:
-        "Grilled tri tip peppercorn drizzle, creamy scalloped potatoes & roasted green beans",
+      title: "Old fashioned pot roast",
+      description: "With gravy, mashed potatoes, roasted green beans & carrots",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -23,9 +28,8 @@ const menu = {
     },
     {
       id: 2,
-      title: "Chicken tikka masala 🇮🇳",
-      description:
-        "Over cauliflower rice with steamed broccoli (popular UK/Indian dish of marinated chicken in a mild tomato & spice cream sauce)",
+      title: "Chicken teriyaki",
+      description: "Over cauliflower rice with sauteed Asian vegetables",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -36,9 +40,9 @@ const menu = {
     },
     {
       id: 3,
-      title: "Pork carnitas salad bowl 💃",
+      title: "Grilled pork tenderloin",
       description:
-        "Chipotle-inspired with fresh salsa roja, guacamole & radishes",
+        "With apple chutney, roasted sweet potatoes & brussels sprouts",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -49,9 +53,8 @@ const menu = {
     },
     {
       id: 4,
-      title: "Chili lime shrimp & pineapple skewers 🍤",
-      description:
-        "over a coconut cauliflower rice 'risotto' with sauteed spinach (contains cashews)",
+      title: 'Southern shrimp & "grits"',
+      description: "With slow cooked garlicky collard greens",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -62,9 +65,8 @@ const menu = {
     },
     {
       id: 5,
-      title: "Pesto chicken zoodles 🍝",
-      description:
-        "with garlic, basil & blistered cherry tomatoes (contains walnuts)",
+      title: "Chicken & mushroom alfredo",
+      description: "Over zoodles, served with steamed broccoli",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -75,9 +77,9 @@ const menu = {
     },
     {
       id: 6,
-      title: "Cauliflower gratin 🍲",
+      title: "Shredded kale & quinoa salad",
       description:
-        "with manchego cheese & almond sauce with roasted asparagus (gluten-free, contains dairy & almonds)",
+        "La Grande Orange-inspired, with a champagne vinaigrette (grapes, diced red bell peppers, toasted sunflower seeds, mozzarella cheese)",
       vegan: false,
       vegetarian: true,
       favorite: false,
@@ -88,9 +90,8 @@ const menu = {
     },
     {
       id: 7,
-      title: "Street tacos 🌮",
-      description:
-        "Black bean & sweet potato street tacos with pickled red onion, cabbage & avocado crema",
+      title: "Vegetable pad thai",
+      description: "Carrots, broccoli, zucchini, red bell pepper, onions",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -101,8 +102,8 @@ const menu = {
     },
     {
       id: 8,
-      title: "Soup of the week 🥣",
-      description: "Vegetable beef stew",
+      title: "Homestyle chicken & vegetables",
+      description: "Soup of the week",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -113,9 +114,8 @@ const menu = {
     },
     {
       id: 9,
-      title: "Vegetable side 🥕",
-      description:
-        'roasted root vegetables with brown "butter" and herbs (red potatoes, parsnips, carrots, sweet potatoes, yellow onion & beets)',
+      title: "Brussels sprout, bacon & potato hash",
+      description: "Vegetable side",
       vegan: false,
       vegetarian: true,
       favorite: false,

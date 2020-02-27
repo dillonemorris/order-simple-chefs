@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react"
 import { OrderContext } from "../context/OrderContext"
+import Tag from "../components/Tag"
 
-import { PRICES } from "../data/menu"
+import { PRICES, filters } from "../data/menu"
 
 const Meal = ({ meal }) => {
-  // TODO: Create Tag component. One for each of these if they are true
-  // const { vegan, vegetarian, wholeThirty } = meal
   const [mealOrder, setMealOrder] = useState(meal)
   const { meals, setMeals } = useContext(OrderContext)
+
+  const tags = filters.filter(({ title }) => meal[title])
 
   const updateMeals = updatedMeal => {
     const mealToUpdate = meals.findIndex(meal => meal.id === updatedMeal.id)
@@ -39,12 +40,23 @@ const Meal = ({ meal }) => {
   }, [mealOrder])
 
   return (
-    <div className="flex flex-row justify-between items-center w-full rounded-full my-8 p-4 py-6 bg-white shadow-md">
+    <div className="flex flex-row justify-between items-center w-full rounded-full my-8 p-4 pt-6 pb-2 bg-white shadow-md">
       <div className="pl-8 pr-4">
         <h1 className="text-xl mb-1 text-gray-900">{meal.title}</h1>
         <p className="mb-0 text-gray-700">{meal.description}</p>
+        <div className="flex pt-2">
+          {tags.map(({ title, icon }) => (
+            <Tag
+              title={title}
+              icon={icon}
+              backgroundColor="#EBF4FF"
+              color="#434190"
+              iconColor="#434190"
+            />
+          ))}
+        </div>
       </div>
-      <div className="inline-flex items-center">
+      <div className="inline-flex items-center mb-4">
         <button
           onClick={() => updateCountAndPrice(meal, "decrement")}
           className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-3 rounded-full"

@@ -15,9 +15,17 @@ const OrderSummary = () => {
 
       <div
         style={{ padding: `1.45rem 1.0875rem` }}
-        className="font-sans flex-col flex-1 max-w-xl font-sans container mx-auto"
+        className="font-sans flex-col flex-1 max-w-xl font-sans container mx-auto h-full"
       >
-        <h2 className="mt-12 mb-8">Order Summary</h2>
+        <div className="flex justify-between items-center pb-4 mb-2">
+          <h2 className="mt-12 mb-8">Order Summary</h2>
+          <Link
+            className="bg-transparent hover:bg-indigo-600 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-indigo-600 hover:border-transparent rounded-full"
+            to="/"
+          >
+            Edit Order
+          </Link>
+        </div>
         <div className="grid grid-cols-3 gap-8 mb-24">
           {meals &&
             meals.map(meal => {
@@ -36,9 +44,6 @@ const OrderSummary = () => {
         <div className="mb-12" style={{ maxWidth: "20rem" }}>
           <OrderTotals subTotal={subTotal} mealCount={mealCount} />
         </div>
-        <button className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full">
-          <Link to="/">Edit Order</Link>
-        </button>
       </div>
     </Layout>
   )
