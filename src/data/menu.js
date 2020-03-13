@@ -16,8 +16,9 @@ const menu = {
   meals: [
     {
       id: 1,
-      title: "Old fashioned pot roast",
-      description: "With gravy, mashed potatoes, roasted green beans & carrots",
+      title: "Buffalo chicken-stuffed potatoes 🐔",
+      description:
+        "With scratch-made ranch dressing & roasted green beans (contains cashews)",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -28,8 +29,9 @@ const menu = {
     },
     {
       id: 2,
-      title: "Chicken teriyaki",
-      description: "Over cauliflower rice with sauteed Asian vegetables",
+      title: "Shredded beef fajita bowl 🌶",
+      description:
+        "With cabbage, Spanish-style cauliflower rice, avocado crema",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -40,9 +42,8 @@ const menu = {
     },
     {
       id: 3,
-      title: "Grilled pork tenderloin",
-      description:
-        "With apple chutney, roasted sweet potatoes & brussels sprouts",
+      title: "Shrimp scampi 🍤",
+      description: "Over spaghetti squash with steamed broccoli",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -53,8 +54,8 @@ const menu = {
     },
     {
       id: 4,
-      title: 'Southern shrimp & "grits"',
-      description: "With slow cooked garlicky collard greens",
+      title: 'Chicken "parmesan"',
+      description: "Over fresh spinach (contains cashews)",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -65,8 +66,8 @@ const menu = {
     },
     {
       id: 5,
-      title: "Chicken & mushroom alfredo",
-      description: "Over zoodles, served with steamed broccoli",
+      title: "Homestyle corned beef 🍀",
+      description: "With cabbage with boiled red potatoes & carrots",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -77,9 +78,9 @@ const menu = {
     },
     {
       id: 6,
-      title: "Shredded kale & quinoa salad",
+      title: "Portobello steaks 🥩",
       description:
-        "La Grande Orange-inspired, with a champagne vinaigrette (grapes, diced red bell peppers, toasted sunflower seeds, mozzarella cheese)",
+        "With chimichurri, mashed potatoes & roasted brussels sprouts (dairy-free, gluten-free)",
       vegan: false,
       vegetarian: true,
       favorite: false,
@@ -90,8 +91,8 @@ const menu = {
     },
     {
       id: 7,
-      title: "Vegetable pad thai",
-      description: "Carrots, broccoli, zucchini, red bell pepper, onions",
+      title: 'Chickpea "chicken" salad wraps',
+      description: "With charred broccoli salad (contains walnuts)",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -102,7 +103,7 @@ const menu = {
     },
     {
       id: 8,
-      title: "Homestyle chicken & vegetables",
+      title: "Green chile pork stew",
       description: "Soup of the week",
       vegan: false,
       vegetarian: false,
@@ -114,7 +115,7 @@ const menu = {
     },
     {
       id: 9,
-      title: "Brussels sprout, bacon & potato hash",
+      title: "Roasted garlic cauliflower puree",
       description: "Vegetable side",
       vegan: false,
       vegetarian: true,
