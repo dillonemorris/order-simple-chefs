@@ -1,6 +1,6 @@
 import React from "react"
 
-const Soup = ({ color }) => {
+const Vegan = ({ color }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +28,4 @@ const Soup = ({ color }) => {
   )
 }
 
-export default Soup
+export default Vegan

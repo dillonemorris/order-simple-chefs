@@ -10,15 +10,18 @@ export const filters = [
   { title: "paleo", icon: "Paleo" },
   { title: "vegetarian", icon: "Vegetarian" },
   { title: "vegan", icon: "Vegan" },
+  { title: "thursday", icon: "Thursday" },
 ]
+
+// Vegetable side is roasted heirloom carrots with toasted pine nuts
 
 const menu = {
   meals: [
     {
       id: 1,
-      title: "Buffalo chicken-stuffed potatoes 🐔",
+      title: "Grilled turkey burger",
       description:
-        "With scratch-made ranch dressing & roasted green beans (contains cashews)",
+        "with a roasted red pepper aioli, served with potato salad & roasted green beans 🏆",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -29,9 +32,8 @@ const menu = {
     },
     {
       id: 2,
-      title: "Shredded beef fajita bowl 🌶",
-      description:
-        "With cabbage, Spanish-style cauliflower rice, avocado crema",
+      title: "Mongolian beef & broccoli",
+      description: "over cauliflower rice",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -42,8 +44,9 @@ const menu = {
     },
     {
       id: 3,
-      title: "Shrimp scampi 🍤",
-      description: "Over spaghetti squash with steamed broccoli",
+      title: "Chicken marsala",
+      description:
+        "with mashed potatoes & steamed broccoli (sauteed chicken breast in a mushroom & marsala wine sauce) ",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -54,8 +57,9 @@ const menu = {
     },
     {
       id: 4,
-      title: 'Chicken "parmesan"',
-      description: "Over fresh spinach (contains cashews)",
+      title: "Grill mahi mahi",
+      description:
+        "fish taco bowl (romaine, cabbage, mango salsa, grain-free tortilla chips, pomegranate seeds, and chipotle-lime crema)",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -66,8 +70,8 @@ const menu = {
     },
     {
       id: 5,
-      title: "Homestyle corned beef 🍀",
-      description: "With cabbage with boiled red potatoes & carrots",
+      title: "Deconstructed pork egg roll",
+      description: "with a sweet chili glaze 🏆",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -78,9 +82,8 @@ const menu = {
     },
     {
       id: 6,
-      title: "Portobello steaks 🥩",
-      description:
-        "With chimichurri, mashed potatoes & roasted brussels sprouts (dairy-free, gluten-free)",
+      title: "Sweet potato & black bean casserole",
+      description: "(contains dairy, gluten-free)",
       vegan: false,
       vegetarian: true,
       favorite: false,
@@ -91,8 +94,9 @@ const menu = {
     },
     {
       id: 7,
-      title: 'Chickpea "chicken" salad wraps',
-      description: "With charred broccoli salad (contains walnuts)",
+      title: "Pizzeria chop salad",
+      description:
+        "(mixed greens, olives, pistachios, raisins, vegan cheese, sun-dried tomatoes, cucumbers, and Italian vinaigrette)",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -103,7 +107,8 @@ const menu = {
     },
     {
       id: 8,
-      title: "Green chile pork stew",
+      title:
+        "Beef & vegetable (potatoes, carrots, celery, onion, green beans, tomatoes)",
       description: "Soup of the week",
       vegan: false,
       vegetarian: false,
@@ -115,7 +120,7 @@ const menu = {
     },
     {
       id: 9,
-      title: "Roasted garlic cauliflower puree",
+      title: "Roasted heirloom carrots with toasted pine nuts",
       description: "Vegetable side",
       vegan: false,
       vegetarian: true,
@@ -124,6 +129,61 @@ const menu = {
       paleo: false,
       soup: false,
       side: true,
+    },
+    {
+      id: 10,
+      title: "Vegetable lo mein",
+      description:
+        '(snow peas, carrots, broccoli, onion, mushrooms in a sesame-ginger & "soy"- based sauce)',
+      vegan: true,
+      vegetarian: false,
+      favorite: false,
+      quantity: 0,
+      paleo: false,
+      soup: false,
+      side: false,
+      thursday: true,
+    },
+    {
+      id: 11,
+      title: "hili-stuffed sweet potato",
+      description: "served over arugula with vegan sour cream",
+      vegan: true,
+      vegetarian: false,
+      favorite: false,
+      quantity: 0,
+      paleo: false,
+      soup: false,
+      side: false,
+      thursday: true,
+    },
+    {
+      id: 12,
+      title: "Vegetable ragu",
+      description:
+        "with gluten-free pasta (zucchini, carrots, tomatoes, mushrooms, celery)",
+      vegan: true,
+      vegetarian: false,
+      favorite: false,
+      quantity: 0,
+      paleo: false,
+      soup: false,
+      side: false,
+      thursday: true,
+    },
+    {
+      id: 13,
+      title: "Chickpea coconut curry",
+      description:
+        "served with rice & lentils (carrots, sweet potatoes, red bell pepper, broccoli)",
+      vegan: true,
+      vegetarian: false,
+      favorite: false,
+      quantity: 0,
+      paleo: false,
+      soup: false,
+      side: false,
+      thursday: true,
     },
   ],
 }
