@@ -42,17 +42,18 @@ const OrderSummary = () => {
             )}
           <div className="mt-6">
             {meals && <h3 className="text-lg">Thursday</h3>}
-            {meals.map(
-              meal =>
-                meal.quantity > 0 &&
-                meal.thursday && (
-                  <div key={meal.title} className="flex">
-                    <p className="text-base font-normal mb-0">
-                      {meal.title} ({meal.quantity})
-                    </p>
-                  </div>
-                )
-            )}
+            {meals &&
+              meals.map(
+                meal =>
+                  meal.quantity > 0 &&
+                  meal.thursday && (
+                    <div key={meal.title} className="flex">
+                      <p className="text-base font-normal mb-0">
+                        {meal.title} ({meal.quantity})
+                      </p>
+                    </div>
+                  )
+              )}
           </div>
         </div>
         <div className="mb-12" style={{ maxWidth: "20rem" }}>
