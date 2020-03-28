@@ -19,9 +19,9 @@ const menu = {
   meals: [
     {
       id: 1,
-      title: "Grilled turkey burger",
+      title: "Chicken piccata",
       description:
-        "with a roasted red pepper aioli, served with potato salad & roasted green beans 🏆",
+        "With mashed potatoes & roasted asparagus (sauteed chicken breast in a lemon caper wine sauce)",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -32,8 +32,8 @@ const menu = {
     },
     {
       id: 2,
-      title: "Mongolian beef & broccoli",
-      description: "over cauliflower rice",
+      title: "Balsamic grilled tri-tip",
+      description: "with roasted red potatoes & brussels sprouts",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -44,9 +44,8 @@ const menu = {
     },
     {
       id: 3,
-      title: "Chicken marsala",
-      description:
-        "with mashed potatoes & steamed broccoli (sauteed chicken breast in a mushroom & marsala wine sauce) ",
+      title: "Blackened shrimp",
+      description: "over a cauliflower puree with sauteed spinach",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -57,9 +56,9 @@ const menu = {
     },
     {
       id: 4,
-      title: "Grill mahi mahi",
+      title: "Kalua shredded pork",
       description:
-        "fish taco bowl (romaine, cabbage, mango salsa, grain-free tortilla chips, pomegranate seeds, and chipotle-lime crema)",
+        "with grilled pineapple, deli-style cole slaw & mashed sweet potatoes",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -70,8 +69,9 @@ const menu = {
     },
     {
       id: 5,
-      title: "Deconstructed pork egg roll",
-      description: "with a sweet chili glaze 🏆",
+      title: "Chicken tikka masala",
+      description:
+        "over cauliflower rice with roasted green beans (popular UK/Indian dish of marinated chicken in a mild tomato & spice cream sauce)",
       vegan: false,
       vegetarian: false,
       favorite: false,
@@ -82,8 +82,9 @@ const menu = {
     },
     {
       id: 6,
-      title: "Sweet potato & black bean casserole",
-      description: "(contains dairy, gluten-free)",
+      title: "Vegetable fettuccine alfredo",
+      description:
+        "Broccoli, red bell peppers & asparagus in a rich cream sauce - contains dairy",
       vegan: false,
       vegetarian: true,
       favorite: false,
@@ -94,9 +95,9 @@ const menu = {
     },
     {
       id: 7,
-      title: "Pizzeria chop salad",
+      title: "Vegan fajitas",
       description:
-        "(mixed greens, olives, pistachios, raisins, vegan cheese, sun-dried tomatoes, cucumbers, and Italian vinaigrette)",
+        "with Spanish-style rice and guacamole (portobello strips, peppers, onions, with 3 corn tortillas) (gluten-free)",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -107,8 +108,7 @@ const menu = {
     },
     {
       id: 8,
-      title:
-        "Beef & vegetable (potatoes, carrots, celery, onion, green beans, tomatoes)",
+      title: 'Broccoli "cheddar" soup',
       description: "Soup of the week",
       vegan: false,
       vegetarian: false,
@@ -120,8 +120,9 @@ const menu = {
     },
     {
       id: 9,
-      title: "Roasted heirloom carrots with toasted pine nuts",
-      description: "Vegetable side",
+      title: "Green bean almondine",
+      description:
+        "blanched green beans with garlic, lemon, and toasted almond slivers",
       vegan: false,
       vegetarian: true,
       favorite: false,
@@ -132,9 +133,8 @@ const menu = {
     },
     {
       id: 10,
-      title: "Vegetable lo mein",
-      description:
-        '(snow peas, carrots, broccoli, onion, mushrooms in a sesame-ginger & "soy"- based sauce)',
+      title: "Lemony herb orzo salad",
+      description: "spinach, chickpeas, cucumbers, red onion, basil, mint",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -146,8 +146,8 @@ const menu = {
     },
     {
       id: 11,
-      title: "hili-stuffed sweet potato",
-      description: "served over arugula with vegan sour cream",
+      title: "Butternut squash linguine",
+      description: "with asparagus and fried sage",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -159,9 +159,8 @@ const menu = {
     },
     {
       id: 12,
-      title: "Vegetable ragu",
-      description:
-        "with gluten-free pasta (zucchini, carrots, tomatoes, mushrooms, celery)",
+      title: "Spicy(ish) peanut sauce",
+      description: "Over sweet potatoes, mixed vegetables and rice",
       vegan: true,
       vegetarian: false,
       favorite: false,
@@ -173,9 +172,8 @@ const menu = {
     },
     {
       id: 13,
-      title: "Chickpea coconut curry",
-      description:
-        "served with rice & lentils (carrots, sweet potatoes, red bell pepper, broccoli)",
+      title: "Grilled caesar salad",
+      description: "with blackened chickpeas and quinoa",
       vegan: true,
       vegetarian: false,
       favorite: false,

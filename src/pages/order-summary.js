@@ -26,20 +26,34 @@ const OrderSummary = () => {
             Edit Order
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-8 mb-24">
+        <div className="rounded p-8 shadow-lg bg-white">
+          {meals && <h3 className="text-lg">Monday</h3>}
           {meals &&
-            meals.map(meal => {
-              return (
-                meal.quantity > 0 && (
-                  <div key={meal.title} className="bg-white rounded shadow-sm">
-                    <h3 className="text-lg bg-indigo-100 p-4 mb-0">
-                      {meal.title}
-                    </h3>
-                    <h3 className="text-3xl mb-0 px-4 py-4">{meal.quantity}</h3>
+            meals.map(
+              meal =>
+                meal.quantity > 0 &&
+                !meal.thursday && (
+                  <div key={meal.title} className="flex">
+                    <p className="text-base font-normal mb-0">
+                      {meal.title} ({meal.quantity})
+                    </p>
                   </div>
                 )
-              )
-            })}
+            )}
+          <div className="mt-6">
+            {meals && <h3 className="text-lg">Thursday</h3>}
+            {meals.map(
+              meal =>
+                meal.quantity > 0 &&
+                meal.thursday && (
+                  <div key={meal.title} className="flex">
+                    <p className="text-base font-normal mb-0">
+                      {meal.title} ({meal.quantity})
+                    </p>
+                  </div>
+                )
+            )}
+          </div>
         </div>
         <div className="mb-12" style={{ maxWidth: "20rem" }}>
           <OrderTotals subTotal={subTotal} mealCount={mealCount} />
